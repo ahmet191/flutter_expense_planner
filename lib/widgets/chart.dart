@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, prefer_const_constructors, use_key_in_widget_constructors, prefer_const_constructors_in_immutables
+
 import './chart_bar.dart';
 
 import '../models/transaction.dart';
@@ -31,7 +33,7 @@ class Chart extends StatelessWidget {
         'day': DateFormat.E().format(weekDay).substring(0, 1),
         'amount': totalSum,
       };
-    });
+    }).reversed.toList();
   }
 
   double get totalSpending {
